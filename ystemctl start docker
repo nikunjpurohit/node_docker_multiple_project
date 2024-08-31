@@ -1,0 +1,22 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (]8;;file://ip-172-31-7-163/usr/lib/systemd/system/docker.service/usr/lib/systemd/system/docker.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Thu 2024-08-29 04:13:59 UTC; 1 day 9h ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: ]8;;https://docs.docker.comhttps://docs.docker.com]8;;
+   Main PID: 4059 (dockerd)
+      Tasks: 12
+     Memory: 81.1M (peak: 678.3M)
+        CPU: 41.302s
+     CGroup: /system.slice/docker.service
+             └─[0;38;5;245m4059 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock[0m
+
+Aug 29 13:53:43 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T13:53:43.267231075Z" level=error msg="failed to close container stdin" container=fb557c1b0e0f29e46dbc5eb3c18e546d6d933143e7d8b57453ee3e0823d4c75f error="NotFound: process does not exist 0c92c3352b40f5949633988f26476c2341a899d7f1329abc80f5178e9e8d0ede: not found" module=libcontainerd namespace=moby
+Aug 29 14:01:58 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T14:01:58.803890336Z" level=error msg="stream copy error: reading from a closed fifo"
+Aug 29 14:01:58 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T14:01:58.807434802Z" level=error msg="Error running exec 0912c919e68f883518178fc546b443fc68fc99aaa7d14869245474a61c2c8793 in container: OCI runtime exec failed: exec failed: unable to start container process: exec: \"netstat\": executable file not found in $PATH: unknown"
+Aug 29 14:01:58 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T14:01:58.810227186Z" level=error msg="failed to close container stdin" container=fb557c1b0e0f29e46dbc5eb3c18e546d6d933143e7d8b57453ee3e0823d4c75f error="NotFound: process does not exist 0912c919e68f883518178fc546b443fc68fc99aaa7d14869245474a61c2c8793: not found" module=libcontainerd namespace=moby
+Aug 29 16:46:12 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T16:46:12.160390303Z" level=info msg="ignoring event" container=fb557c1b0e0f29e46dbc5eb3c18e546d6d933143e7d8b57453ee3e0823d4c75f module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 29 16:46:52 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T16:46:52.685890012Z" level=error msg="Not continuing with pull after error: errors:\ndenied: requested access to the resource is denied\nunauthorized: authentication required\n"
+Aug 29 16:46:52 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T16:46:52.685936745Z" level=info msg="Ignoring extra error returned from registry" error="unauthorized: authentication required"
+Aug 29 16:51:18 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T16:51:18.804444507Z" level=info msg="ignoring event" container=4fe5b49607e62793615156d106918c7f64b2053b80e54b8554f61ba903ca1176 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 29 16:52:53 ip-172-31-7-163 dockerd[4059]: time="2024-08-29T16:52:53.791996928Z" level=info msg="ignoring event" container=7bd222b221b5ac83d6dadca8aba3b6e83fededfa3ba04dc29ebdc3df88bf4b25 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 30 07:10:20 ip-172-31-7-163 dockerd[4059]: time="2024-08-30T07:10:20.532978678Z" level=info msg="ignoring event" container=1a096e8e8cfbeef3d23aca83a33f59c3df7a9cd082aa0065d16bcf46f32dbae6 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
